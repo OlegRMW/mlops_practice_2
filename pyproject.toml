@@ -1,0 +1,28 @@
+[project]
+name = "poetry-project"
+version = "0.1.0"
+description = "some"
+authors = [
+    {name = "OlegRMW",email = "zagudpev@mail.ru"}
+]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "matplotlib (>=3.11.2,<4.0.0)",
+    "pandas (>=3.0.6,<4.0.0)",
+    "requests (>=2.34.2,<3.0.0)"
+]
+
+[tool.poetry]
+package-mode = false
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+test = [
+    "pytest (>=9.1.1,<10.0.0)"
+]
+dev = [
+    "ruff (>=0.17.1,<0.18.0)"
+]
